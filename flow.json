@@ -1,0 +1,44 @@
+{
+	"contracts": {
+		"Counter": {
+			"source": "cadence/contracts/Counter.cdc",
+			"aliases": {
+				"testing": "0000000000000007"
+			}
+		},
+		"EventStaking": "./cadence/contracts/EventStaking.cdc",
+		"ProfileStorage": "./cadence/contracts/UserStorage.cdc",
+		"ProfileStorage002": "./cadence/contracts/ProfileStorage002.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testing": "127.0.0.1:3569",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"codyy6": {
+			"address": "573a7a21a4a65fd9",
+			"key": {
+				"type": "file",
+				"location": "codyy6.pkey"
+			}
+		},
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": {
+				"type": "file",
+				"location": "emulator-account.pkey"
+			}
+		}
+	},
+	"deployments": {
+		"testnet": {
+			"codyy6": [
+				"EventStaking",
+				"ProfileStorage",
+				"ProfileStorage002"
+			]
+		}
+	}
+}
